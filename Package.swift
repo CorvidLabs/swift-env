@@ -15,18 +15,10 @@ let package = Package(
         .library(name: "Env", targets: ["Env"])
     ],
     targets: [
-        .target(
-            name: "Env",
-            swiftSettings: [
-                .enableUpcomingFeature("StrictConcurrency")
-            ]
-        ),
+        .target(name: "Env"),
         .testTarget(
             name: "EnvTests",
-            dependencies: ["Env"],
-            swiftSettings: [
-                .enableUpcomingFeature("StrictConcurrency")
-            ]
+            dependencies: ["Env"]
         )
     ]
 )
