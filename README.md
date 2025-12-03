@@ -1,9 +1,8 @@
 # swift-env
 
-[![CI](https://github.com/0xLeif/swift-env/actions/workflows/ci.yml/badge.svg)](https://github.com/0xLeif/swift-env/actions/workflows/ci.yml)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xLeif%2Fswift-env%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/0xLeif/swift-env)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2F0xLeif%2Fswift-env%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/0xLeif/swift-env)
-[![Documentation](https://github.com/0xLeif/swift-env/actions/workflows/docs.yml/badge.svg)](https://0xleif.github.io/swift-env/documentation/env/)
+[![CI](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-env/ci.yml?label=CI&branch=main)](https://github.com/CorvidLabs/swift-env/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/CorvidLabs/swift-env)](https://github.com/CorvidLabs/swift-env/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/CorvidLabs/swift-env)](https://github.com/CorvidLabs/swift-env/releases)
 
 A pure Swift library for loading and accessing environment variables from `.env` files.
 
