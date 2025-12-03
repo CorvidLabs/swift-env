@@ -4,16 +4,12 @@ import Foundation
 public enum EnvError: Error, Sendable {
     /// The specified file was not found.
     case fileNotFound(String)
-
     /// Failed to read the file contents.
     case readError(String, Error)
-
     /// A required environment variable is missing.
     case missingRequired(String)
-
     /// Failed to convert value to expected type.
     case invalidType(key: String, expected: String, actual: String)
-
     /// Parse error in the .env file.
     case parseError(line: Int, message: String)
 }

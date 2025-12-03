@@ -3,21 +3,23 @@ import Foundation
 // MARK: - Loading from Files
 
 extension Env {
-    /// Loads environment variables from a `.env` file.
-    ///
-    /// By default, looks for `.env` in the current working directory.
-    ///
-    /// ```swift
-    /// let env = try Env.load()
-    /// let env = try Env.load(from: ".env.production")
-    /// ```
-    ///
-    /// - Parameters:
-    ///   - path: Path to the .env file (default: ".env")
-    ///   - interpolate: Whether to expand variable references (default: true)
-    ///   - mergeWithProcess: Whether to include process environment (default: false)
-    /// - Returns: Loaded environment
-    /// - Throws: `EnvError` if loading fails
+    /**
+     Loads environment variables from a `.env` file.
+
+     By default, looks for `.env` in the current working directory.
+
+     ```swift
+     let env = try Env.load()
+     let env = try Env.load(from: ".env.production")
+     ```
+
+     - Parameters:
+        - path: Path to the .env file (default: ".env")
+        - interpolate: Whether to expand variable references (default: true)
+        - mergeWithProcess: Whether to include process environment (default: false)
+     - Returns: Loaded environment
+     - Throws: `EnvError` if loading fails
+     */
     public static func load(
         from path: String = ".env",
         interpolate: Bool = true,
@@ -40,13 +42,15 @@ extension Env {
         return try load(contentsOfFile: resolvedPath, interpolate: interpolate, mergeWithProcess: mergeWithProcess)
     }
 
-    /// Loads environment from a file URL.
-    ///
-    /// - Parameters:
-    ///   - url: URL to the .env file
-    ///   - interpolate: Whether to expand variable references
-    ///   - mergeWithProcess: Whether to include process environment
-    /// - Returns: Loaded environment
+    /**
+     Loads environment from a file URL.
+
+     - Parameters:
+        - url: URL to the .env file
+        - interpolate: Whether to expand variable references
+        - mergeWithProcess: Whether to include process environment
+     - Returns: Loaded environment
+     */
     public static func load(
         contentsOf url: URL,
         interpolate: Bool = true,
@@ -78,13 +82,15 @@ extension Env {
         return try load(contents: contents, interpolate: interpolate, mergeWithProcess: mergeWithProcess)
     }
 
-    /// Loads environment from string contents.
-    ///
-    /// - Parameters:
-    ///   - contents: The .env file contents
-    ///   - interpolate: Whether to expand variable references
-    ///   - mergeWithProcess: Whether to include process environment
-    /// - Returns: Loaded environment
+    /**
+     Loads environment from string contents.
+
+     - Parameters:
+        - contents: The .env file contents
+        - interpolate: Whether to expand variable references
+        - mergeWithProcess: Whether to include process environment
+     - Returns: Loaded environment
+     */
     public static func load(
         contents: String,
         interpolate shouldInterpolate: Bool = true,
@@ -104,19 +110,21 @@ extension Env {
         return Env(values)
     }
 
-    /// Loads and merges multiple .env files.
-    ///
-    /// Files are loaded in order; later files override earlier ones.
-    ///
-    /// ```swift
-    /// let env = try Env.load(from: [".env", ".env.local", ".env.production"])
-    /// ```
-    ///
-    /// - Parameters:
-    ///   - paths: Paths to .env files
-    ///   - interpolate: Whether to expand variable references
-    ///   - mergeWithProcess: Whether to include process environment
-    /// - Returns: Merged environment
+    /**
+     Loads and merges multiple .env files.
+
+     Files are loaded in order; later files override earlier ones.
+
+     ```swift
+     let env = try Env.load(from: [".env", ".env.local", ".env.production"])
+     ```
+
+     - Parameters:
+        - paths: Paths to .env files
+        - interpolate: Whether to expand variable references
+        - mergeWithProcess: Whether to include process environment
+     - Returns: Merged environment
+     */
     public static func load(
         from paths: [String],
         interpolate: Bool = true,
@@ -158,11 +166,13 @@ extension Env {
 // MARK: - Convenience Loaders
 
 extension Env {
-    /// Loads `.env` file if it exists, otherwise returns process environment.
-    ///
-    /// ```swift
-    /// let env = Env.loadOrProcess()
-    /// ```
+    /**
+     Loads `.env` file if it exists, otherwise returns process environment.
+
+     ```swift
+     let env = Env.loadOrProcess()
+     ```
+     */
     public static func loadOrProcess(from path: String = ".env") -> Env {
         do {
             return try load(from: path, mergeWithProcess: true)
@@ -171,16 +181,18 @@ extension Env {
         }
     }
 
-    /// Loads environment for the current build configuration.
-    ///
-    /// Looks for files in order:
-    /// 1. `.env`
-    /// 2. `.env.local`
-    /// 3. `.env.{configuration}` (e.g., `.env.debug` or `.env.release`)
-    /// 4. `.env.{configuration}.local`
-    ///
-    /// - Parameter configuration: Build configuration name
-    /// - Returns: Merged environment
+    /**
+     Loads environment for the current build configuration.
+
+     Looks for files in order:
+     1. `.env`
+     2. `.env.local`
+     3. `.env.{configuration}` (e.g., `.env.debug` or `.env.release`)
+     4. `.env.{configuration}.local`
+
+     - Parameter configuration: Build configuration name
+     - Returns: Merged environment
+     */
     public static func loadForConfiguration(_ configuration: String) throws -> Env {
         let paths = [
             ".env",

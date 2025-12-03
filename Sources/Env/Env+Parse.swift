@@ -3,18 +3,20 @@ import Foundation
 // MARK: - Dotenv Parser
 
 extension Env {
-    /// Parses dotenv format text into a dictionary.
-    ///
-    /// Supports:
-    /// - `KEY=value`
-    /// - `export KEY=value`
-    /// - `# comments`
-    /// - `KEY="quoted value"` or `KEY='quoted value'`
-    /// - Empty lines
-    ///
-    /// - Parameter contents: The .env file contents
-    /// - Returns: Dictionary of parsed key-value pairs
-    /// - Throws: `EnvError.parseError` for malformed lines
+    /**
+     Parses dotenv format text into a dictionary.
+
+     Supports:
+     - `KEY=value`
+     - `export KEY=value`
+     - `# comments`
+     - `KEY="quoted value"` or `KEY='quoted value'`
+     - Empty lines
+
+     - Parameter contents: The .env file contents
+     - Returns: Dictionary of parsed key-value pairs
+     - Throws: `EnvError.parseError` for malformed lines
+     */
     public static func parse(_ contents: String) throws -> [String: String] {
         var result: [String: String] = [:]
         let lines = contents.components(separatedBy: .newlines)
@@ -121,14 +123,16 @@ extension Env {
 // MARK: - Variable Interpolation
 
 extension Env {
-    /// Expands variable references in values.
-    ///
-    /// Supports `${VAR}` and `$VAR` syntax.
-    ///
-    /// - Parameters:
-    ///   - values: Dictionary with potential variable references
-    ///   - processEnv: Whether to also look up in process environment
-    /// - Returns: Dictionary with expanded values
+    /**
+     Expands variable references in values.
+
+     Supports `${VAR}` and `$VAR` syntax.
+
+     - Parameters:
+        - values: Dictionary with potential variable references
+        - processEnv: Whether to also look up in process environment
+     - Returns: Dictionary with expanded values
+     */
     public static func interpolate(
         _ values: [String: String],
         withProcessEnv processEnv: Bool = true
