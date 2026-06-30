@@ -25,7 +25,7 @@ Add to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/0xLeif/swift-env.git", from: "0.1.0")
+    .package(url: "https://github.com/CorvidLabs/swift-env.git", from: "0.1.0")
 ]
 ```
 
