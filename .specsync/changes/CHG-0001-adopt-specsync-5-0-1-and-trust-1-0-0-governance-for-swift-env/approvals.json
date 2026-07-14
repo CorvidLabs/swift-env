@@ -1,0 +1,102 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783988152,
+      "digest": "d826431c972e13499cf8cac71dfaf0de7c3015f3b55df0cb10384f173ce47b63",
+      "note": "Approved the governance-only adoption definition after replacing circular lifecycle tasks and reviewing complete artifacts."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783988799,
+      "digest": "3f1e14b0beeaad67ce78097e4a6bd553e6494daa2d7c26d1b9c20b3cb2e41b54",
+      "note": "Accepted after successful native verification, complete 100% SpecSync coverage, and review of the governance-only migration."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783988991,
+      "digest": "89dacafc5ec6658f51b004139cfd0843dccc9510d4513dc8dcb6453dc7033fe8",
+      "note": "Accepted after fresh supported verification passed the native lane on the final governance-only delivery with complete SpecSync coverage."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783989197,
+      "digest": "d587d5514b4bf4124d0738e3eeaad1c9e9c5b941744adac4769222b2ab01f90d",
+      "note": "Accepted after refreshed native verification passed on the final deterministic governance delivery with complete SDD coverage."
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-env",
+      "actor": "user:0xLeif",
+      "reason": "Correct the canonical Change Log table metadata before delivery; requirements and product behavior are unchanged.",
+      "timestamp": 1783988949,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783988799,
+        "digest": "3f1e14b0beeaad67ce78097e4a6bd553e6494daa2d7c26d1b9c20b3cb2e41b54",
+        "note": "Accepted after successful native verification, complete 100% SpecSync coverage, and review of the governance-only migration."
+      },
+      "prior_verification": {
+        "timestamp": 1783988760,
+        "commit": "4f2de58e691c321c79341f09cfb36f50fb73af9f",
+        "contract_digest": "d826431c972e13499cf8cac71dfaf0de7c3015f3b55df0cb10384f173ce47b63",
+        "workspace_digest": "d2e2d97d2852a267cab56ab1cee56fde0b8dffb7417b3e64263acf12becd7a65",
+        "acceptance_input_digest": "3356d437a53613839a7d55093e576c4879cee09e5c3c357cf23004ce45788a03",
+        "passed": true,
+        "commands": [
+          {
+            "command": "fledge lanes run verify",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "3356d437a53613839a7d55093e576c4879cee09e5c3c357cf23004ce45788a03",
+      "current_acceptance_input_digest": "ac4049444169c8da2eb06dd0d7df5c17faca74c2650017c9c72fa626b12b10b0"
+    },
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-env",
+      "actor": "user:0xLeif",
+      "reason": "Refresh adoption evidence after the approved agent-path coverage correction and deterministic SwiftPM ignore rule.",
+      "timestamp": 1783989175,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783988991,
+        "digest": "89dacafc5ec6658f51b004139cfd0843dccc9510d4513dc8dcb6453dc7033fe8",
+        "note": "Accepted after fresh supported verification passed the native lane on the final governance-only delivery with complete SpecSync coverage."
+      },
+      "prior_verification": {
+        "timestamp": 1783988984,
+        "commit": "4f2de58e691c321c79341f09cfb36f50fb73af9f",
+        "contract_digest": "d826431c972e13499cf8cac71dfaf0de7c3015f3b55df0cb10384f173ce47b63",
+        "workspace_digest": "e9dda4ab9309d5e4fbd2d2501633a439600b5aaf2f2f007d609b9c3ab386a979",
+        "acceptance_input_digest": "3356d437a53613839a7d55093e576c4879cee09e5c3c357cf23004ce45788a03",
+        "passed": true,
+        "commands": [
+          {
+            "command": "fledge lanes run verify",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "3356d437a53613839a7d55093e576c4879cee09e5c3c357cf23004ce45788a03",
+      "current_acceptance_input_digest": "ac4049444169c8da2eb06dd0d7df5c17faca74c2650017c9c72fa626b12b10b0"
+    }
+  ]
+}

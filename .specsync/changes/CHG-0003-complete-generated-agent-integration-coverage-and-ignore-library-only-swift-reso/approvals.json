@@ -1,0 +1,19 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783989145,
+      "digest": "e5053674fed03593e27f4c606ba04ad011c8f6daca392cdb58c98a7046783af5",
+      "note": "Approved complete, non-semantic governance correction after reviewing truthful artifacts and affected paths."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783989165,
+      "digest": "9da9f1dd4df25f9b4a9d13ef2bd8a95f8420bd8eaa61de8a987614cd9c7f7ae7",
+      "note": "Accepted after native verification passed 65 tests, all four agent integrations were confirmed installed, and the correction remained governance-only."
+    }
+  ],
+  "reopenings": []
+}

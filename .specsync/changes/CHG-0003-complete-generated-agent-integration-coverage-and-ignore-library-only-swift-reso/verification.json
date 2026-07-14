@@ -1,0 +1,16 @@
+{
+  "timestamp": 1783989159,
+  "commit": "f59ce58429b63c5274029311769a96822bd3ad98",
+  "contract_digest": "e5053674fed03593e27f4c606ba04ad011c8f6daca392cdb58c98a7046783af5",
+  "workspace_digest": "dc404166b64422de55f9e7bb406a3e6c1b70b2464790e9db286df8e9159d9c39",
+  "acceptance_input_digest": "e3457b43213d9e0970f56eedf925b428122bee2005d6df6da50b3afb2feca581",
+  "passed": true,
+  "commands": [
+    {
+      "command": "fledge lanes run verify",
+      "success": true,
+      "exit_code": 0
+    }
+  ],
+  "requirement_ids": []
+}
