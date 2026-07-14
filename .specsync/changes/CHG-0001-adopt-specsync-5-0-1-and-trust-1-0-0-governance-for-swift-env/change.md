@@ -1,6 +1,6 @@
 ---
 id: CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-env
-state: draft
+state: accepted
 type: migration
 base_commit: 329b62005acbee76bf4756395c6812eb496e2e34
 ---

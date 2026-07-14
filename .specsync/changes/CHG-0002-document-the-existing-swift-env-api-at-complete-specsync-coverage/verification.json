@@ -1,0 +1,24 @@
+{
+  "timestamp": 1783988969,
+  "commit": "4f2de58e691c321c79341f09cfb36f50fb73af9f",
+  "contract_digest": "0d2735ad32669b39d91eca31499f9fb7758832d9f12d5cc9fad47ccf5be34a74",
+  "workspace_digest": "e9dda4ab9309d5e4fbd2d2501633a439600b5aaf2f2f007d609b9c3ab386a979",
+  "acceptance_input_digest": "b170b946e29eaa38329383d2df863f3cd886f7d87e60e4952fb00d63fd18de74",
+  "passed": true,
+  "commands": [
+    {
+      "command": "fledge lanes run verify",
+      "success": true,
+      "exit_code": 0
+    }
+  ],
+  "requirement_ids": [
+    "REQ-env-001",
+    "REQ-env-002",
+    "REQ-env-003",
+    "REQ-env-004",
+    "REQ-env-005",
+    "REQ-env-006",
+    "REQ-env-007"
+  ]
+}

@@ -9,5 +9,7 @@ artifact: tasks
 - [x] Install all four agent integrations.
 - [x] Add Trust, Augur, Attest, and native Fledge verification.
 - [x] Preserve existing CI, docs, package, and source behavior.
-- [ ] Record definition approval.
-- [ ] Record verification and closing approval.
+- [x] Cover source, tests, documentation, policy, workflow, and generated agent
+  paths with the SDD lifecycle.
+- [x] Use the deterministic Fledge verification lane as the portable SpecSync
+  verification command.

@@ -2,3 +2,4 @@
 name = "swift-env-trust-wave8"
 
 [specs]
+env = "specs/env/env.spec.md"

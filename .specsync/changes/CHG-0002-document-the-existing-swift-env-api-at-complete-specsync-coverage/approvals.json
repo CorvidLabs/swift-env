@@ -1,0 +1,69 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783988400,
+      "digest": "0d2735ad32669b39d91eca31499f9fb7758832d9f12d5cc9fad47ccf5be34a74",
+      "note": "Approved after reviewing the complete seven-requirement semantic delta and product-untouched canonical companion."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783988726,
+      "digest": "7350aa8ab222f18f69615c6677de7906f91c86e3802e053132490dd530c25a9c",
+      "note": "Accepted after supported verification passed 65 tests and strict SpecSync documented 38/38 exports at 100% file and LOC coverage without product changes."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783988991,
+      "digest": "8eef252d49cc8fd998df5f43b05ca6e2e7686e4d7f0553d8958d774d0963bb4c",
+      "note": "Accepted after fresh supported verification passed 65 tests in 8 suites and confirmed complete, accurate 100% API coverage with corrected Change Log metadata."
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0002-document-the-existing-swift-env-api-at-complete-specsync-coverage",
+      "actor": "user:0xLeif",
+      "reason": "Correct the canonical Change Log table metadata before delivery; requirements and product behavior are unchanged.",
+      "timestamp": 1783988949,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783988726,
+        "digest": "7350aa8ab222f18f69615c6677de7906f91c86e3802e053132490dd530c25a9c",
+        "note": "Accepted after supported verification passed 65 tests and strict SpecSync documented 38/38 exports at 100% file and LOC coverage without product changes."
+      },
+      "prior_verification": {
+        "timestamp": 1783988701,
+        "commit": "4f2de58e691c321c79341f09cfb36f50fb73af9f",
+        "contract_digest": "0d2735ad32669b39d91eca31499f9fb7758832d9f12d5cc9fad47ccf5be34a74",
+        "workspace_digest": "da69f9b5ae674057da07bec614877cbad534a8c43db4513128c374f0ebb3a032",
+        "acceptance_input_digest": "c7c62c0a78aa06dc25e46bdefecf56fcfb19daa63a3b21c0e3da87d660b18699",
+        "passed": true,
+        "commands": [
+          {
+            "command": "fledge lanes run verify",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": [
+          "REQ-env-001",
+          "REQ-env-002",
+          "REQ-env-003",
+          "REQ-env-004",
+          "REQ-env-005",
+          "REQ-env-006",
+          "REQ-env-007"
+        ]
+      },
+      "stale_acceptance_input_digest": "c7c62c0a78aa06dc25e46bdefecf56fcfb19daa63a3b21c0e3da87d660b18699",
+      "current_acceptance_input_digest": "b170b946e29eaa38329383d2df863f3cd886f7d87e60e4952fb00d63fd18de74"
+    }
+  ]
+}

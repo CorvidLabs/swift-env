@@ -5,10 +5,11 @@
   "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for swift-env",
   "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for swift-env",
   "kind": "migration",
-  "state": "draft",
+  "state": "accepted",
+  "canonical_applied": true,
   "base_commit": "329b62005acbee76bf4756395c6812eb496e2e34",
   "created_at": 1783885543,
-  "updated_at": 1783885554,
+  "updated_at": 1783988991,
   "affected_specs": [],
   "affected_paths": [
     "Sources/",
