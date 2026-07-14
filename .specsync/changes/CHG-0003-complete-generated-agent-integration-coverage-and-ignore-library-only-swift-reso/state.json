@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0003-complete-generated-agent-integration-coverage-and-ignore-library-only-swift-reso",
+  "slug": "complete-generated-agent-integration-coverage-and-ignore-library-only-swift-reso",
+  "title": "Complete generated agent integration coverage and ignore library-only Swift resolution state",
+  "description": "Complete generated agent integration coverage and ignore library-only Swift resolution state",
+  "kind": "migration",
+  "state": "accepted",
+  "canonical_applied": true,
+  "base_commit": "f59ce58429b63c5274029311769a96822bd3ad98",
+  "created_at": 1783989091,
+  "updated_at": 1783989165,
+  "affected_specs": [],
+  "affected_paths": [
+    ".claude/",
+    ".cursor/",
+    ".codex/",
+    ".gemini/",
+    ".gitignore"
+  ],
+  "no_spec_change": true,
+  "no_spec_change_rationale": "This corrects governance coverage for generated agent integrations and ignores local SwiftPM resolution output without changing the public API or runtime behavior",
+  "acceptance_criteria": [
+    "All four generated SpecSync agent integrations remain installed; Package.resolved is ignored as local library verification output; strict SpecSync passes at 100%; native verification passes; no Sources or Tests files change."
+  ],
+  "selected_artifacts": [
+    "context",
+    "research",
+    "design",
+    "plan",
+    "tasks",
+    "testing",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "no",
+    "public_contract": "no"
+  }
+}
